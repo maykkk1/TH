@@ -1,8 +1,9 @@
 import './App.css';
+import CreateCharPage from './pages/CreateCharPage/CreateCharPage';
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <CreateCharPage/>
   );
 }
 
