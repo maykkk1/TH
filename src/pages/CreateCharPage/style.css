@@ -21,6 +21,7 @@
     height: 550px;
     background-color: rgb(31, 29, 29);
     border-radius: 5px;
+    border: 1px solid white;
 }
 
 .CreateCharPage_Title {
@@ -34,50 +35,19 @@
     font-size: 1.5rem;
     margin-bottom: 10px;
     font-family: 'Roboto', sans-serif;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--primary-color);
 }
 
-.CreateCharPage_avatarWrapper {
-    width: 130px;
-    height: 130px;
-    background-color: black;
-    margin-bottom: 10px;
-}
-
-.CreateCharPage_Form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.CreateCharPage_Form label {
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
+.CreateCharPage_Button {
+    margin-top: 2rem;
     font-size: 2rem;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.CreateCharPage_Form input {
-    width: 250px;
-    height: 2.5rem;
-    outline: none;
-    font-size: 2.4rem;
-    text-align: center;
-}
-
-.CreateCharPage_Form button {
-    margin-top: 20px;
-    width: 100px;
-    height: 40px;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 5px;
     background-color: var(--primary-color);
     color: white;
-    cursor: pointer;
-
+    padding: 1rem;
+    border-radius: 5px;  
+    cursor: pointer; 
+    border: 1px solid white;
 }
 
 
