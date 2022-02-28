@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: white;
     padding: 2rem;
     color: white;
 }
@@ -21,7 +21,7 @@
     height: 550px;
     background-color: rgb(31, 29, 29);
     border-radius: 5px;
-    border: 1px solid white;
+    border: 3px solid var(--primary-color);
 }
 
 .CreateCharPage_Title {
