@@ -2,22 +2,22 @@ import "./style.css";
 import useUser from "../../../Hooks/useUser";
 
 function CreateCharModalCharacters(props) {
-  const { user, setUser } = useUser();
-
-  const cardSelected = () => {
-    
-  }
+  const { setUser } = useUser();
+  const id = `card_${props.id}`;
   return (
-    <div
-      onClick={(e) => {
-        e.target.style.backgroundColor = "rgba(0, 0, 0, .5)";
-        setUser((prev) => ({
-          ...prev,
-          avatar: props.cardInfo.imgPath,
-        }));
-      }}
-      className="CreateCharModal_CharacterCard"
-    >
+    <li key={props.id} className="CreateCharModal_CharacterCard">
+      <div
+        onClick={(e) => {
+          props.changeCard(props.cardChoise)
+          setUser((prev) => ({
+            ...prev,
+            avatar: props.cardInfo.imgPath,
+          }));
+        }}
+        id={id}
+        style={{ opacity: `${props.opacity}` }}
+        className="CreateCharModal_CardWrapper"
+      ></div>
       <h2>{props.cardInfo.name}</h2>
       <div className="CreateCharModal_CharacterCard_AvatarWrapper">
         <img
@@ -26,8 +26,7 @@ function CreateCharModalCharacters(props) {
         />
       </div>
       <p>{props.cardInfo.descricao}</p>
-    </div>
+    </li>
   );
 }
-
 export default CreateCharModalCharacters;

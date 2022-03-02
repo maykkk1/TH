@@ -97,6 +97,7 @@
     text-align: center;
     border: none;
     background-color: rgba(0, 0, 0, 0.4);
+    color: white;
 }
 
 .CreateCharModal_Form button {
