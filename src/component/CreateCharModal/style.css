@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .CreateCharModal {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 20;
+    z-index: 30;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
@@ -13,23 +15,105 @@
 
 .CreateCharModal_Container{
     width: 60%;
-    height: 70%;
-    background-color: rgb(31, 29, 29);
+    height: 90%;
+    background-color: rgb(245, 244, 245);
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 2px solid var(--primary-color);
+    color: black;
+    padding: 10px;
 }
 
-.CreateCharModal_ImgWrapper {
-    width: 50px;
-    height: 50px;
-    background-color: white;
+
+.CreateCharModal_Close {
+    position: relative;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+    margin-left: auto;
 }
 
-.CreateCharModal_ImgWrapper img {
-    width: 50px;
-    height: 50px;
+.CreateCharModal_Close::after {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 3px;
+    display: block;
+    background-color: var(--primary-color);
+    transform: rotate(-45deg);
+    border-radius: 10px;
+}
+
+.CreateCharModal_Close::before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 3px;
+    display: block;
+    background-color: var(--primary-color);
+    transform: rotate(45deg);
+    border-radius: 10px;
+}
+
+.CreateCharModal_Container h1::after {
+    margin:10px auto;
+    content: '';
+    display: block;
+    width: 200px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.CreateCharModal_CharacteresSection {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    width: 100%;
+    justify-content: space-evenly;
+    color: black; 
+}
+
+
+.CreateCharModal_Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20vh;
+}
+
+.CreateCharModal_Form label {
+    text-transform: uppercase;
+}
+
+.CreateCharModal_Form input {
+    margin-top: 5px;
+    width: 250px;
+    height: 2.3rem;
+    font-size: 1.5rem;
+    outline: none;
+    text-align: center;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.CreateCharModal_Form button {
+    margin-top: 15px;
+    padding: .5rem 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.CreateCharModal_Form button:hover {
+    background-color: #290c36;
 }
 
 
