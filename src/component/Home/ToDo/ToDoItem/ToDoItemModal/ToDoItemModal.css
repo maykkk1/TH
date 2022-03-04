@@ -1,0 +1,70 @@
+
+.ToDoItemModal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.ToDoItemModal_Container {
+    margin-top: 30px;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(237, 233, 240);
+    position: absolute;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--primary-color);
+}
+
+
+
+.ToDoItemModal_Container form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.ToDoItemModal_Container form label {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.ToDoItemModal_Container form input {
+    outline: none;
+    width: 200px;
+    text-align: center;
+    height: 2rem;
+    font-size: 1.7rem;
+    border: 1px solid var(--primary-color);
+}
+
+.ToDoItemModal_Container form button {
+    width: 150px;
+    height: 2.3rem;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.ToDoItemModal_Container form button:hover {
+    background-color: rgb(62, 11, 92);
+}

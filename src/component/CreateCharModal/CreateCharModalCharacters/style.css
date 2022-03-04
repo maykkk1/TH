@@ -22,10 +22,6 @@
     transition: 400ms;
 }
 
-.CreateCharModal_CardWrapper:hover {
-    opacity: 0.3;
-}
-
 
 .CreateCharModal_CharacterCard_AvatarWrapper {
     width: 200px;

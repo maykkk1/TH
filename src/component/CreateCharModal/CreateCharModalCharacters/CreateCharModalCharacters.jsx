@@ -12,6 +12,7 @@ function CreateCharModalCharacters(props) {
           setUser((prev) => ({
             ...prev,
             avatar: props.cardInfo.imgPath,
+            classe: props.cardInfo.name
           }));
         }}
         id={id}

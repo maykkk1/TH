@@ -117,10 +117,31 @@
     background-color: #290c36;
 }
 
+@media (max-width: 900px) {
+    .CreateCharModal {
+        height: max-content;
+    }
+    .CreateCharModal_Container {
+        height: max-content;
+        padding: 1rem 1rem;
+    }
+    .CreateCharModal_CharacteresSection {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        height: max-content;
+    }
+    .CreateCharModal_Close {
+        top: 0;
+    } 
+}
+
 
 @media (max-width: 600px) {
     .CreateCharModal_Container {
         width: 100%;
-        height: 100vh;
+        min-height: 500px;
+        height: max-content;
     }
 }
+

@@ -1,9 +1,10 @@
 import './App.css';
-import CreateCharPage from './pages/CreateCharPage/CreateCharPage';
+import AppRouts from './AppRouts'
+
 
 function App() {
   return (
-    <CreateCharPage/>
+    <AppRouts/>
   );
 }
 

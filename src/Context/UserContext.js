@@ -6,8 +6,11 @@ export const UserContext = createContext();
 export default function UserContextProvider(props) {
     const [user, setUser] = useState({
         name:'',
-        avatar:''
+        avatar:'',
+        classe:'',
+        level:99,
     });
+
 
     return (
         <UserContext.Provider value={{user, setUser}}>

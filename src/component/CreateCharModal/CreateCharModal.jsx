@@ -3,6 +3,7 @@ import CreateCharModalCharacters from "./CreateCharModalCharacters/CreateCharMod
 import "./style.css";
 import { CharactersList } from "../../services/CharactersList/CharactersList";
 import useUser from "../../Hooks/useUser";
+import { useNavigate } from "react-router-dom";
 
 const CreateCharModal = ({ onClose }) => {
   const { user, setUser } = useUser();
@@ -12,14 +13,18 @@ const CreateCharModal = ({ onClose }) => {
 
   const changeSelectedCard = (card) => {
     if(card_0_Selected === 0 && card_1_Selected == 0 && card_2_Selected == 0){
-      card(.3)
+      card(.3);
     } else {
-      setCard_0_Selected(0)
-      setCard_1_Selected(0)
-      setCard_2_Selected(0)
+      setCard_0_Selected(0);
+      setCard_1_Selected(0);
+      setCard_2_Selected(0);
       card(.3)
     }
   };
+  const nav = useNavigate();
+  const navigation = () => { 
+    nav('/home');
+  }
 
   const handleOutsideClick = (e) => {
     if (e.target.id === "CharModal") onClose();
@@ -80,6 +85,7 @@ const CreateCharModal = ({ onClose }) => {
             onClick={(e) => {
               e.preventDefault();
               console.log(user);
+              navigation()
             }}
           >
             Criar
