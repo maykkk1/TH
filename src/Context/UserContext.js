@@ -8,7 +8,8 @@ export default function UserContextProvider(props) {
         name:'',
         avatar:'',
         classe:'',
-        level:99,
+        level:1,
+        gold:10000
     });
 
 

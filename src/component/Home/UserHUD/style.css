@@ -6,12 +6,9 @@
     width: 100%;
     height: 100%;
     background-color: rgb(237, 233, 240);
+    position: relative;
 }
 
-font {
-    font-family: 'Roboto', sans-serif;
-    font-family: 'MedievalSharp', cursive;
-}
 
 .UserHUD_AvatarSection {
     width: 100%;
@@ -69,4 +66,19 @@ font {
     align-items: center;
     font-size: 2rem;
     background-color: white;
+}
+
+.UserHUD_Gold {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 150px;
+    height: 3rem;
+    background-color: white;
+    font-size: 2.7rem;
+    font-family: 'MedievalSharp', cursive;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }

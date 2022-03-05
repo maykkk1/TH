@@ -3,11 +3,14 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import UserContextProvider from "./Context/UserContext";
+import ToDoListContextProvider from "./Context/ToDoListContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <UserContextProvider>
-      <App />
+      <ToDoListContextProvider>
+        <App />
+      </ToDoListContextProvider>
     </UserContextProvider>
   </React.StrictMode>,
   document.getElementById("root")

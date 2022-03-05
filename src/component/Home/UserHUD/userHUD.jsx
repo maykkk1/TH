@@ -13,6 +13,7 @@ function UserHUD() {
             </div>
             <span className="UserHUD_Class">{user.classe}</span>
             <span className="UserHUD_Level">{user.level}</span>
+            <span className="UserHUD_Gold"><FontAwesomeIcon icon="fas fa-coins" />{user.gold}</span>
         </div>
     </div>
   );

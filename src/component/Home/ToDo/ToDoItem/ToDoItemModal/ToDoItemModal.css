@@ -25,6 +25,23 @@
     border: 2px solid var(--primary-color);
 }
 
+.ToDoItemModal_Close {
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-color);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    top: 1rem;
+    right: 1rem;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+
 
 
 .ToDoItemModal_Container form {
@@ -46,7 +63,7 @@
 
 .ToDoItemModal_Container form input {
     outline: none;
-    width: 200px;
+    width: 250px;
     text-align: center;
     height: 2rem;
     font-size: 1.7rem;
