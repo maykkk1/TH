@@ -46,7 +46,7 @@
     background-color: black;
     border-radius: 200px;
     border: 2px solid var(--primary-color);
-    box-shadow: 1px 1px 3px black;
+    box-shadow: 2px 2px 5px black;
     overflow: hidden;
 }
 
@@ -72,13 +72,28 @@
     position: absolute;
     bottom: 1.5rem;
     right: 1.5rem;
-    width: 150px;
     height: 3rem;
-    background-color: white;
-    font-size: 2.7rem;
     font-family: 'MedievalSharp', cursive;
-    border-radius: 10px;
     display: flex;
     align-items: center;
+    gap: 14px;
+}
+
+.UserHUD_Gold_icon {
+    display: flex;
+    align-items: center;
+    color: rgb(243, 113, 6);
+    border-radius: 10px;
+    font-size: 2.3rem;
+}
+
+.UserHUD_Gold_value {
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    width: 150px;
+    display: flex;
     justify-content: flex-end;
+    background-color: white;
+    border-radius: 10px;
 }

@@ -9,7 +9,9 @@ export default function UserContextProvider(props) {
         avatar:'',
         classe:'',
         level:1,
-        gold:10000
+        xp:0,
+        xpToUp:100,
+        gold:0
     });
 
 
