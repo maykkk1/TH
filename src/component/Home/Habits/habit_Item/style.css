@@ -21,3 +21,26 @@
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
 }
+
+.habit_Item_buttons {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.habit_Item span {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.habit_Item_check {
+    color: rgb(19, 121, 19);
+}
+
+.habit_Item_delete {
+    color: rgb(255, 30, 0);
+}

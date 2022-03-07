@@ -19,7 +19,6 @@ function HabitsModal(props) {
         const auxHabitList = habitsList
         auxHabitList.push(habit)
         SetHabitsList(auxHabitList)
-        console.log(habitsList)
     }
 
 
