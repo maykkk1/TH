@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App";
 import UserContextProvider from "./Context/UserContext";
 import ToDoListContextProvider from "./Context/ToDoListContext";
+import HabitsListContextProvider from "./Context/HabitsListContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <UserContextProvider>
       <ToDoListContextProvider>
-        <App />
+        <HabitsListContextProvider>
+          <App />
+        </HabitsListContextProvider>
       </ToDoListContextProvider>
     </UserContextProvider>
   </React.StrictMode>,

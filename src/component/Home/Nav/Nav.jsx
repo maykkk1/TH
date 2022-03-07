@@ -1,5 +1,6 @@
 import React from "react";
 import ToDo from "../ToDo/ToDo";
+import Habits from "../Habits/Habits"
 import UserHUD from "../UserHUD/userHUD";
 import "./style.css";
 
@@ -22,7 +23,7 @@ function Nav(props) {
       </button>
       <button
         onClick={() => {
-          props.setComponent(<UserHUD />);
+          props.setComponent(<Habits />);
         }}
       >
         Habits
