@@ -9,7 +9,7 @@ function ToDoItem(props) {
     const {user, setUser} = useUser();
     const CompleteToDo = (e) => {
         let id = (e.target.id)
-        id = parseInt(id.replace(/\D/g,''))
+        id = parseInt(id)
         const auxList = toDoList.filter((toDo)=>{
             return toDo.id !== id; 
         })

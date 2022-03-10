@@ -13,12 +13,23 @@ function HabitsModal(props) {
         }
     }
 
+    const getId = () => {
+        if (habitsList.length > 0) {
+          return habitsList[habitsList.length - 1].id + 1;
+        } else {
+          return 0;
+        }
+      };
+
     const addHabit = (e) => {
+        const id = getId()
         e.preventDefault()
-        const habit = {content:habitText}
+        const habit = {content:habitText, id:id}
         const auxHabitList = habitsList
         auxHabitList.push(habit)
         SetHabitsList(auxHabitList)
+        props.onClose()
+        console.log(habitsList)
     }
 
 

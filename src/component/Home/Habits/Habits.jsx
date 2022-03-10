@@ -21,7 +21,7 @@ function Habits() {
         <ul className="HabitsList">
           {habitsList.map((element) => {
             return (
-              <Habit_Item habitText={element.content}/>
+              <Habit_Item key={element.id} habitText={element.content} keyId={element.id}/>
             )
           })}
         </ul>
