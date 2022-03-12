@@ -1,0 +1,14 @@
+.Title {
+    height:10%;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.Title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+}

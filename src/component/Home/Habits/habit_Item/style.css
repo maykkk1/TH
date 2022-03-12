@@ -29,12 +29,16 @@
     justify-content: space-between;
 }
 
-.habit_Item span {
+.habit_Item button {
     font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
 }
 
 .habit_Item_check {

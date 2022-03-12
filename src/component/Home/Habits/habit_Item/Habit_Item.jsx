@@ -10,7 +10,7 @@ function Habit_Item(props) {
   const {habitsList, SetHabitsList} = useHabitsList()
 
   const habitDone = () => {
-    setUser(LevelUp(user, 25));
+    setUser(LevelUp(user, 25, 10));
   };
 
   const deteleHabit = (e) => {
@@ -19,31 +19,20 @@ function Habit_Item(props) {
         return habit.id !== id; 
     })
     SetHabitsList(auxList)
-    console.log(habitsList)
+    console.log(id)
   };
 
   return (
     <li className="habit_Item">
       <p>{props.habitText}</p>
       <div className="habit_Item_buttons">
-        <span
-          onClick={() => {
-            habitDone();
-          }}
-          className="habit_Item_check"
-        >
-          <FontAwesomeIcon icon={faCheck} />
-        </span>
-        <span className="habit_Item_delete">
+        <button
+          onClick={() => {habitDone();}}className="habit_Item_check"><FontAwesomeIcon icon={faCheck} />
+        </button>
+        <button className="habit_Item_delete" >
           <FontAwesomeIcon icon={faXmark} />
-          <span
-            id={`habit_${props.keyId}`}
-            onClick={(e) => {
-              deteleHabit(e);
-            }}
-            className="habit_Item_deleteHabitWrapped"
-          ></span>
-        </span>
+          <span className="habit_Item_deleteHabitWrapped" id={`habit_${props.keyId}`} onClick={(e) => {deteleHabit(e);}}></span>
+        </button>
       </div>
     </li>
   );

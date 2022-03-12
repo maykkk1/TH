@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoins } from "@fortawesome/free-solid-svg-icons";
 
 function UserHUD() {
-  const { user, setUser } = useUser();
+  const { user } = useUser();
   return (
     <div className="UserHUD">
       <div className="UserHUD_AvatarSection">
@@ -22,9 +22,7 @@ function UserHUD() {
           <span className="UserHUD_Gold_icon">
             <FontAwesomeIcon icon={faCoins} />
           </span>
-          <span className="UserHUD_Gold_value">
-            {user.gold}
-            </span>
+          <span className="UserHUD_Gold_value">{user.gold}</span>
         </span>
       </div>
     </div>

@@ -4,6 +4,7 @@ import HabitsModal from "./HabitsModal/HabitsModal";
 import useHabitsList from "../../../Hooks/useHabitsList";
 import "./style.css";
 import Habit_Item from "./habit_Item/Habit_Item";
+import Title from "../util/Title/Title";
 
 function Habits() {
     const [isHabitModalVisible, SetIsHabitModalVisible] = useState(false)
@@ -17,7 +18,7 @@ function Habits() {
     <div className="Habits">
         {isHabitModalVisible ? <HabitsModal onClose={handleModal}/> : null}
         <button onClick={handleModal} className="AddHabit">+</button>
-        <h2>Habits</h2>
+        <Title titulo={"Habits"}/>
         <ul className="HabitsList">
           {habitsList.map((element) => {
             return (

@@ -1,0 +1,80 @@
+.Rewards {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(237, 233, 240);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.Rewards_Container {
+    padding: .5rem;
+    width: 100%;
+    height: 80%;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+    overflow-y: scroll;
+}
+
+.Reward_Item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 150px;
+    height: 220px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+    border: 5px solid gainsboro;
+}
+
+.Reward_Item h2 {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.Reward_ImgWrapper {
+    width: 130px;
+    height: 130px;
+    border-radius: 50px;
+    border-radius: 3px;
+
+}
+.Reward_Item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Reward_Value {
+    border-top: 2px solid gainsboro;
+    width: 100%;
+    height: 50px;
+    margin-top: auto;
+    background-color: rgba(166, 15, 236, 0.185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 5px;
+    color: orange;
+}
+
+.Reward_Value p {
+    color: black;
+    font-weight: bolder;
+}
+
+
+

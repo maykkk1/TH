@@ -3,6 +3,7 @@ import ToDo from "../ToDo/ToDo";
 import Habits from "../Habits/Habits"
 import UserHUD from "../UserHUD/userHUD";
 import "./style.css";
+import Rewards from "../Rewards/Rewards";
 
 function Nav(props) {
   return (
@@ -30,7 +31,7 @@ function Nav(props) {
       </button>
       <button
         onClick={() => {
-          props.setComponent(<UserHUD />);
+          props.setComponent(<Rewards />);
         }}
       >
         Rewards
