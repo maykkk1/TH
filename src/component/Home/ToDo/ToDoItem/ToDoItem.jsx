@@ -19,7 +19,7 @@ function ToDoItem(props) {
         })
         setUser(LevelUp(user, 50, 30))
     }
-
+    
     return ( 
         <li  className='ToDoItem'>
             <p>{props.texto}</p>
