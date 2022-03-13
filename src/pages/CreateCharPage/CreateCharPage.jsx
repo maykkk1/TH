@@ -15,12 +15,11 @@ const CreateCharPage = () => {
     <div className="CreateCharPage">
       <div className="CreateCharPage_panel">
         <h1 className="CreateCharPage_Title">T&H</h1>
-        <h2 className="CreateCharPage_Title2">Seja bem vindo, aventureiro!</h2>
         <button
           onClick={showModal}
           className="CreateCharPage_Button"
         >
-          Criar Personagem
+          Start
         </button>
         {isCreateCharModalVisible ? <CreateCharModal onClose={()=>{SetIsCreateCharModalVisible(false)}} /> : null}
       </div>

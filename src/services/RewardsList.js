@@ -10,7 +10,7 @@ const RewardsList = [
     rewardTitle: "Watch a Movie",
     rewardTime: "",
     rewardImgUrl:
-      "https://i.pinimg.com/originals/b0/0a/4f/b00a4f90a60c6b00d0dcd75c603d948a.png",
+      "https://www.nicepng.com/png/detail/107-1070734_png-to-movie-lets-go-to-the-movies.png",
     rewardGoldCost: 350,
   },
   {
@@ -31,7 +31,7 @@ const RewardsList = [
     rewardTitle: "Free Time",
     rewardTime: "(30 min)",
     rewardImgUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk-mF6LbkrJObvMlm6QpgFMc5GkiEM2XTGt2IzukbxCX8kNTfaTduEn4UXQJttuQ4bCes&usqp=CAU",
+      "https://www.kindpng.com/picc/m/302-3023938_timer-clipart-30-minute-time-management-png-transparent.png",
     rewardGoldCost: 100,
   },
   {

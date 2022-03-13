@@ -31,29 +31,26 @@
     text-shadow: 1px 1px 5px var(--primary-color);
 }
 
-.CreateCharPage_Title2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    font-family: 'Roboto', sans-serif;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--primary-color);
-}
-
 .CreateCharPage_Button {
     margin-top: 2rem;
     font-weight: bolder;
     font-size: 2rem;
-    background-color: #eae1ee;
     color: var(--primary-color);
-    padding: 1rem;
+    padding: 1rem 3rem;
     border-radius: 15px;  
     cursor: pointer; 
     border: 1px solid var(--primary-color);
-    transition: 400ms;
+    transition: 500ms;
+    text-transform: uppercase;
+    background-color:  #D3CCE3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ;
 }
 
 .CreateCharPage_Button:hover {
-    background-color: #290c36;
+    background: none;
+    background-color: #120916;
     color: white;
     border: 1px solid white;
 }

@@ -68,32 +68,3 @@
     background-color: white;
 }
 
-.UserHUD_Gold {
-    position: absolute;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    height: 3rem;
-    font-family: 'MedievalSharp', cursive;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-.UserHUD_Gold_icon {
-    display: flex;
-    align-items: center;
-    color: rgb(243, 113, 6);
-    border-radius: 10px;
-    font-size: 2.3rem;
-}
-
-.UserHUD_Gold_value {
-    padding: 5px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
-    width: 150px;
-    display: flex;
-    justify-content: flex-end;
-    background-color: white;
-    border-radius: 10px;
-}

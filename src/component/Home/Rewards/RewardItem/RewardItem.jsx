@@ -3,14 +3,18 @@ import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoins } from "@fortawesome/free-solid-svg-icons";
 import useUser from "../../../../Hooks/useUser"
+import GoldView from "../../util/GoldView/GoldView";
 
 function RewardItem(props) {
-  const {user, SetUser} = useUser()
+  const {user, setUser} = useUser()
 
   const buyReward = () => {
     const auxUser = user
-    auxUser['gold']-= props.rewardGoldCost
-    SetUser(auxUser)
+    if(auxUser['gold'] >= props.rewardGoldCost){
+      auxUser['gold']-= props.rewardGoldCost
+      setUser(auxUser)
+      props.rerenderGoldView(<GoldView />)
+    }
   }
 
 

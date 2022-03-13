@@ -11,7 +11,7 @@ export default function UserContextProvider(props) {
         level:1,
         xp:0,
         xpToUp:100,
-        gold:0
+        gold:1000
     });
 
 

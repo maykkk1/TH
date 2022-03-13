@@ -1,8 +1,7 @@
 import React from "react";
 import "./style.css";
 import useUser from "../../../Hooks/useUser";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoins } from "@fortawesome/free-solid-svg-icons";
+import GoldView from "../util/GoldView/GoldView";
 
 function UserHUD() {
   const { user } = useUser();
@@ -18,12 +17,7 @@ function UserHUD() {
         </div>
         <span className="UserHUD_Class">{user.classe}</span>
         <span className="UserHUD_Level">{user.level}</span>
-        <span className="UserHUD_Gold">
-          <span className="UserHUD_Gold_icon">
-            <FontAwesomeIcon icon={faCoins} />
-          </span>
-          <span className="UserHUD_Gold_value">{user.gold}</span>
-        </span>
+        <GoldView />
       </div>
     </div>
   );
