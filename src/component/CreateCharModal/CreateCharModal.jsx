@@ -1,34 +1,42 @@
 import React, { useEffect, useState } from "react";
-import CreateCharModalCharacters from "./CreateCharModalCharacters/CreateCharModalCharacters";
 import "./style.css";
-import { CharactersList } from "../../services/CharactersList/CharactersList";
 import useUser from "../../Hooks/useUser";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faVenus, faMars } from "@fortawesome/free-solid-svg-icons";
+import Character from "./Character/Character";
+import CharacteresContainer from "./CharacteresContainer/CharacteresContainer";
 
 const CreateCharModal = ({ onClose }) => {
   const { user, setUser } = useUser();
-  const [card_0_Selected, setCard_0_Selected] = useState(0);
-  const [card_1_Selected, setCard_1_Selected] = useState(0);
-  const [card_2_Selected, setCard_2_Selected] = useState(0);
+  const [userName, SetUserName] = useState()
+  const [genderSelected, SetGenderSelected] = useState("female");
+  const [characterSelected, SetCharacterSelected] = useState();
 
-  const changeSelectedCard = (card) => {
-    if(card_0_Selected === 0 && card_1_Selected == 0 && card_2_Selected == 0){
-      card(.3);
-    } else {
-      setCard_0_Selected(0);
-      setCard_1_Selected(0);
-      setCard_2_Selected(0);
-      card(.3)
-    }
-  };
   const nav = useNavigate();
-  const navigation = () => { 
-    nav('/home');
-  }
+  const navigation = () => {
+    nav("/home");
+  };
 
   const handleOutsideClick = (e) => {
     if (e.target.id === "CharModal") onClose();
   };
+
+  const handleNameUser = (e) => {
+    let tempNameValue = e.target.value;
+    if(tempNameValue.length <= 15){
+      SetUserName(tempNameValue)
+    }
+
+  }
+
+  const createUser = () => {
+    const auxUser = user
+    auxUser.name = userName
+    auxUser.class = characterSelected
+    auxUser.avatar = characterSelected
+    navigation()
+  }
 
   return (
     <div
@@ -43,53 +51,35 @@ const CreateCharModal = ({ onClose }) => {
           }}
           className="CreateCharModal_Close"
         ></div>
-        <h1>Escolha sua classe</h1>
-        <ul className="CreateCharModal_CharacteresSection">
-          <CreateCharModalCharacters
-            cardChoise={setCard_0_Selected}
-            changeCard={changeSelectedCard}
-            opacity={card_0_Selected}
-            cardInfo={CharactersList[0]}
-            id={0}
-          />
-          <CreateCharModalCharacters
-            cardChoise={setCard_1_Selected}
-            changeCard={changeSelectedCard}
-            opacity={card_1_Selected}
-            cardInfo={CharactersList[1]}
-            id={1}
-          />
-          <CreateCharModalCharacters
-            cardChoise={setCard_2_Selected}
-            changeCard={changeSelectedCard}
-            opacity={card_2_Selected}
-            cardInfo={CharactersList[2]}
-            id={2}
-          />
-        </ul>
-        <form className="CreateCharModal_Form" action="">
-          <label htmlFor="name">Nome</label>
-          <input
-            onChange={(e) => {
-              setUser((prev) => ({
-                ...prev,
-                name: e.target.value,
-              }));
-            }}
-            autoComplete="off"
-            id="name"
-            type="text"
-          />
+        <h1>Select your class</h1>
+        <div className="CreateCharModal_GenderChoiseSection">
           <button
-            type="submit"
-            onClick={(e) => {
-              e.preventDefault();
-              console.log(user);
-              navigation()
+            onClick={() => {
+              SetGenderSelected("female");
             }}
           >
-            Criar
+            <FontAwesomeIcon icon={faVenus} />
           </button>
+          <button
+            onClick={() => {
+              SetGenderSelected("male");
+            }}
+          >
+            <FontAwesomeIcon icon={faMars} />
+          </button>
+        </div>
+        <CharacteresContainer
+          characterSelected={characterSelected}
+          setCharacterSelected={SetCharacterSelected}
+          genderSelected={genderSelected}
+        />
+        <form>
+          <label htmlFor="CreateCharModal_userName">Name</label>
+          <input onChange={(e)=>{handleNameUser(e)}} value={userName} type="text" id="CreateCharModal_userName" />
+          <button onClick={(e)=>{
+            e.preventDefault()
+            createUser()
+          }}>Create</button>
         </form>
       </div>
     </div>
