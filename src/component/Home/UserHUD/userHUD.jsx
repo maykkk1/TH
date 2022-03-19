@@ -5,6 +5,7 @@ import GoldView from "../util/GoldView/GoldView";
 
 function UserHUD() {
   const { user } = useUser();
+  console.log(user)
   return (
     <div className="UserHUD">
       <div className="UserHUD_AvatarSection">
