@@ -8,10 +8,10 @@ import Character from "./Character/Character";
 import CharacteresContainer from "./CharacteresContainer/CharacteresContainer";
 
 const CreateCharModal = ({ onClose }) => {
-  const { user, setUser } = useUser();
+  const { user, setUser } = useUser('');
   const [userName, SetUserName] = useState()
   const [genderSelected, SetGenderSelected] = useState("female");
-  const [characterSelected, SetCharacterSelected] = useState();
+  const [characterSelected, SetCharacterSelected] = useState('');
 
   const nav = useNavigate();
   const navigation = () => {
@@ -31,10 +31,10 @@ const CreateCharModal = ({ onClose }) => {
   }
 
   const createUser = () => {
-    const auxUser = user
-    auxUser.name = userName
-    auxUser.class = characterSelected
-    auxUser.avatar = characterSelected
+    if(userName === undefined || characterSelected === undefined) return // falta mostrar informação na tela
+    user.name = userName
+    user.class = characterSelected
+    user.avatar = characterSelected
     navigation()
   }
 
