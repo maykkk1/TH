@@ -1,158 +1,172 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .CreateCharModal {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 30;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.CreateCharModal_Container{
-    width: 60%;
-    height: 90%;
-    background-color: rgb(228, 228, 228);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border: 2px solid var(--primary-color);
-    color: black;
-    padding: 10px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .CreateCharModal_Container {
-    text-transform: uppercase;
+  width: 60%;
+  height: 90%;
+  background-color: rgb(228, 228, 228);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid var(--primary-color);
+  color: black;
+  padding: 10px;
 }
 
+.CreateCharModal_Container {
+  text-transform: uppercase;
+}
 
 .CreateCharModal_Close {
-    position: relative;
-    right: 30px;
-    top: 30px;
-    cursor: pointer;
-    margin-left: auto;
+  position: relative;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+  margin-left: auto;
 }
 
 .CreateCharModal_Close::after {
-    position: absolute;
-    content: '';
-    width: 30px;
-    height: 3px;
-    display: block;
-    background-color: var(--primary-color);
-    transform: rotate(-45deg);
-    border-radius: 10px;
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 3px;
+  display: block;
+  background-color: var(--primary-color);
+  transform: rotate(-45deg);
+  border-radius: 10px;
 }
 
 .CreateCharModal_Close::before {
-    position: absolute;
-    content: '';
-    width: 30px;
-    height: 3px;
-    display: block;
-    background-color: var(--primary-color);
-    transform: rotate(45deg);
-    border-radius: 10px;
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 3px;
+  display: block;
+  background-color: var(--primary-color);
+  transform: rotate(45deg);
+  border-radius: 10px;
 }
 
 .CreateCharModal_GenderChoiseSection {
-    margin-top: 2rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .CreateCharModal_GenderChoiseSection button {
-    width: 70px;
-    height: 70px;
-    font-size: 3rem;
-    background-color: var(--primary-color);
-    color: white;
-    text-shadow: 1px 2px 3px white;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: 400ms;
+  width: 70px;
+  height: 70px;
+  font-size: 3rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-shadow: 1px 2px 3px white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
 }
 
 .CreateCharModal_GenderChoiseSection button:hover {
-    background-color: black;
+  background-color: black;
 }
 
 .CreateCharModal_CharacterOptionsSection {
-    display: flex;
-    flex-direction: row;
-    align-content: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 3rem;
 }
 
 .CreateCharModal form {
-    width: 100%;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
 }
 
 .CreateCharModal form label {
-    text-transform: uppercase;
-    font-weight: bolder;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 .CreateCharModal form input {
-    font-size: 2.3rem;
-    height: 2.4rem;
-    width: 300px;
-    background-color: rgb(182, 174, 174);
-    border: none;
-    text-align: center;
-    outline: none;
-    color: white;
-    margin-bottom: 15px;
+  font-size: 2.3rem;
+  height: 2.4rem;
+  width: 300px;
+  background-color: rgb(182, 174, 174);
+  border: none;
+  text-align: center;
+  outline: none;
+  color: white;
+  margin-bottom: 15px;
 }
 
 .CreateCharModal form button {
-    background-color:#D3CCE3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    ;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: bolder;
-    width: 23%;
-    height: 90%;
-    cursor: pointer;
-    border: 2px solid var(--primary-color);
-    border-radius: 14px;
-    transition: 400ms;
-    padding: .5rem 0;
+  background-color: #d3cce3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e9e4f0,
+    #d3cce3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e9e4f0,
+    #d3cce3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bolder;
+  width: 150px;
+  height: 90%;
+  cursor: pointer;
+  border: 2px solid var(--primary-color);
+  border-radius: 14px;
+  transition: 400ms;
+  padding: 0.5rem 0;
 }
 
 .CreateCharModal form button:hover {
-    background: none;
-    background-color: var(--primary-color);
-    color: white;
-    border: 2px solid black;
+  background: none;
+  background-color: var(--primary-color);
+  color: white;
+  border: 2px solid black;
 }
 
-
-@media (max-width: 1000px) {
-    .CreateCharModal_Container {
-        width: 100%;
-        height: 100%;
-    }
+@media (max-width: 900px) {
+  .CreateCharModal {
+    height: max-content;
+  }
+  .CreateCharModal_Container {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+  }
+  .CreateCharModal_Close {
+    top: 5px;
+    right: 25px;
+  }
+  h1 {
+    margin-top: 25px;
+  }
 }
-
-

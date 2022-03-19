@@ -71,7 +71,8 @@
     .CreateCharPage_panel {
         width: 100%;
         min-width: 350px;
-        height: 100vh;
+        min-height: 100vh;
+        height: max-content;
     }
 }
 
