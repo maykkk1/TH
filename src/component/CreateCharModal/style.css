@@ -95,6 +95,8 @@
   margin-top: 3rem;
 }
 
+
+
 .CreateCharModal form {
   width: 100%;
   padding: 1rem;
@@ -118,7 +120,13 @@
   text-align: center;
   outline: none;
   color: white;
+}
+
+#createError {
+  font-family: "Roboto", sans-serif;
+  text-transform: initial;
   margin-bottom: 15px;
+  color: rgb(216, 15, 15);
 }
 
 .CreateCharModal form button {

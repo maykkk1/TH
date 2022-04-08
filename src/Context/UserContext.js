@@ -4,7 +4,7 @@ import React, {createContext, useState} from 'react';
 export const UserContext = createContext();
 
 export default function UserContextProvider(props) {
-    const [user, setUser] = useState({
+    const [user, SetUser] = useState({
         name:'',
         avatar:'',
         classe:'',
@@ -16,7 +16,7 @@ export default function UserContextProvider(props) {
 
 
     return (
-        <UserContext.Provider value={{user, setUser}}>
+        <UserContext.Provider value={{user, SetUser}}>
             {props.children}
         </UserContext.Provider>
     )

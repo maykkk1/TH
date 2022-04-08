@@ -8,7 +8,8 @@ import Character from "./Character/Character";
 import CharacteresContainer from "./CharacteresContainer/CharacteresContainer";
 
 const CreateCharModal = ({ onClose }) => {
-  const { user, setUser } = useUser('');
+  const { user, SetUser} = useUser();
+  const [createError, SetCreateError] = useState(false);
   const [userName, SetUserName] = useState()
   const [genderSelected, SetGenderSelected] = useState("female");
   const [characterSelected, SetCharacterSelected] = useState('');
@@ -27,14 +28,19 @@ const CreateCharModal = ({ onClose }) => {
     if(tempNameValue.length <= 15){
       SetUserName(tempNameValue)
     }
+  }
 
+  const handleCreateError = () => {
+    return createError ? {opacity:"1"} : {opacity:"0"};
   }
 
   const createUser = () => {
-    if(userName === undefined || characterSelected === undefined) return // falta mostrar informação na tela
-    user.name = userName
-    user.class = characterSelected
-    user.avatar = characterSelected
+    if(userName === undefined || characterSelected === undefined) return SetCreateError(true);
+    SetUser(user =>({
+      ...user,
+      name:userName,
+      avatar:characterSelected
+    }))
     navigation()
   }
 
@@ -76,6 +82,7 @@ const CreateCharModal = ({ onClose }) => {
         <form>
           <label htmlFor="CreateCharModal_userName">Name</label>
           <input onChange={(e)=>{handleNameUser(e)}} value={userName} type="text" id="CreateCharModal_userName" />
+          <span id="createError" style={handleCreateError()}>Escolha sua classe e informe o seu nome!</span>
           <button onClick={(e)=>{
             e.preventDefault()
             createUser()

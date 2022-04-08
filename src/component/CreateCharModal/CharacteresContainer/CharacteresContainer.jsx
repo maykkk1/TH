@@ -7,21 +7,21 @@ function CharacteresContainer(props) {
     <Character
       key={0}
       characterClass={"Warrior"}
-      characterAvatar={"male_warrior.png"}
+      characterAvatar={"male_warrior.webp"}
       setCharacterSelected={props.setCharacterSelected}
       characterSelected={props.characterSelected}
     />,
     <Character
       key={1}
       characterClass={"Rogue"}
-      characterAvatar={"male_rogue.png"}
+      characterAvatar={"male_rogue.webp"}
       setCharacterSelected={props.setCharacterSelected}
       characterSelected={props.characterSelected}
     />,
     <Character
       key={2}
       characterClass={"Mage"}
-      characterAvatar={"male_mage.png"}
+      characterAvatar={"male_mage.webp"}
       setCharacterSelected={props.setCharacterSelected}
       characterSelected={props.characterSelected}
     />,
@@ -31,21 +31,21 @@ function CharacteresContainer(props) {
     <Character
       key={0}
       characterClass={"Warrior"}
-      characterAvatar={"female_warrior.png"}
+      characterAvatar={"female_warrior.webp"}
       setCharacterSelected={props.setCharacterSelected}
       characterSelected={props.characterSelected}
     />,
     <Character
       key={1}
       characterClass={"Rogue"}
-      characterAvatar={"female_rogue.png"}
+      characterAvatar={"female_rogue.webp"}
       setCharacterSelected={props.setCharacterSelected}
       characterSelected={props.characterSelected}
     />,
     <Character
       key={2}
       characterClass={"Mage"}
-      characterAvatar={"female_mage.png"}
+      characterAvatar={"female_mage.webp"}
       setCharacterSelected={props.setCharacterSelected}
       characterSelected={props.characterSelected}
     />,

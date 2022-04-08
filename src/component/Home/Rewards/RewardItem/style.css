@@ -2,14 +2,11 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 150px;
+    width: 149px;
     height: 220px;
     background-color: rgb(255, 255, 255);
     border-radius: 2px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
     overflow: hidden;
-    border: 5px solid gainsboro;
     cursor: pointer;
 }
 
