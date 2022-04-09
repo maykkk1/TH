@@ -6,14 +6,15 @@ import useUser from "../../../../Hooks/useUser"
 import GoldView from "../../util/GoldView/GoldView";
 
 function RewardItem(props) {
-  const {user, setUser} = useUser()
+  const {user, SetUser} = useUser()
 
   const buyReward = () => {
     const auxUser = user
     if(auxUser['gold'] >= props.rewardGoldCost){
       auxUser['gold']-= props.rewardGoldCost
-      setUser(auxUser)
+      SetUser(auxUser)
       props.rerenderGoldView(<GoldView />)
+      console.log('Funcionei')
     }
   }
 

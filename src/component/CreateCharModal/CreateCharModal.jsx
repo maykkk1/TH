@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./style.css";
 import useUser from "../../Hooks/useUser";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVenus, faMars } from "@fortawesome/free-solid-svg-icons";
-import Character from "./Character/Character";
 import CharacteresContainer from "./CharacteresContainer/CharacteresContainer";
 
 const CreateCharModal = ({ onClose }) => {
@@ -12,7 +11,7 @@ const CreateCharModal = ({ onClose }) => {
   const [createError, SetCreateError] = useState(false);
   const [userName, SetUserName] = useState()
   const [genderSelected, SetGenderSelected] = useState("female");
-  const [characterSelected, SetCharacterSelected] = useState('');
+  const [characterSelected, SetCharacterSelected] = useState('female_warrior.webp');
 
   const nav = useNavigate();
   const navigation = () => {
