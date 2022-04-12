@@ -11,7 +11,26 @@
 .HomePage_container {
     width: 380px;
     height: 100vh;
-    background-color: white;
+
+        	/* border */
+            border-style: solid;
+            border-image-source: url("../../assests/RPGUI/border-image-golden.png");
+            border-image-repeat: repeat;
+            border-image-slice: 4 4 4 4;
+            border-image-width: 10px;
+            border-width: 10px;
+            padding: 1px;
+        
+            /* internal border */
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        
+            /* background */
+            background: url("../../assests/RPGUI/background-image-golden.png") repeat repeat;
+            background-clip: padding-box;
+            background-origin: padding-box;
+            background-position: center;
 }
 
 .Nav {

@@ -1,8 +1,9 @@
 .Character {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'MedievalSharp', cursive;
     width: 200px;
     height: max-content;
-    color: black;
+    color: white;
+    text-shadow: 1px 1px 2px black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,9 +16,18 @@
 .Character_imgCharacterWrapper {
     width: 90%;
     height: 170px;
-    border-radius: 100px;
+    background-image: url('../../../assests/RPGUI/background-image-golden.png');
     overflow: hidden;
     border: 2px solid rgb(145, 137, 137);
+
+    border-style: solid;
+	border-image-source: url("../../../assests/RPGUI/border-image-golden.png");
+	border-image-repeat: repeat;
+	border-image-slice: 4 4 4 4;
+	border-image-width: 10px;
+	border-width: 10px;
+	padding: 5px;
+
 }
 
 .Character_imgCharacterWrapper img {

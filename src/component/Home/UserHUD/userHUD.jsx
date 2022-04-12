@@ -1,24 +1,57 @@
-import React from "react";
+import {React, useEffect} from "react";
 import "./style.css";
-import useUser from "../../../Hooks/useUser";
 import GoldView from "../util/GoldView/GoldView";
+import { getUser } from "../../../LocalStorage/user";
+import {getTodoList, setTodoList} from "../../../LocalStorage/TodoStorage"
+import {getHabitsList, setHabitsList} from "../../../LocalStorage/habitsList"
+import ClassIcon from "../util/ClassIcon/ClassIcon";
+import { useNavigate } from "react-router-dom";
 
 function UserHUD() {
-  const { user } = useUser();
+
+  const classIcon = () => {
+    if (getUser().classe === 'Warrior') return <ClassIcon selectedClassName={'Warrior'} selectedClass={'sword.png'}/>
+    if (getUser().classe === 'Mage') return <ClassIcon selectedClassName={'Mage'} selectedClass={'staff.png'}/>
+    if (getUser().classe === 'Rogue') return <ClassIcon selectedClassName={'Rogue'} selectedClass={'dagger.png'}/>
+  }
+
+  const nav = useNavigate();
+  const navigationToCreatePage = () => {
+    nav("/");
+  };
+
+  const deleteAccount = () => {
+    localStorage.clear()
+    navigationToCreatePage()
+  }
+
+
+  useEffect(()=>{
+    if(getHabitsList() == null) setHabitsList([])
+  }, [])
+  
+  useEffect(()=>{
+    if(getTodoList() == null) setTodoList([])
+  }, [])
+
   return (
     <div className="UserHUD">
       <div className="UserHUD_AvatarSection">
-        <span className="UserHUD_Name">{user.name}</span>
         <div className="UserHUD_AvatarWrapper">
           <img
-            src={require(`../../../assests/images/characters/${user.avatar}`)}
+            src={require(`../../../assests/images/characters/${getUser().avatar}`)}
             alt=""
           />
         </div>
-        <span className="UserHUD_Class">{user.classe}</span>
-        <span className="UserHUD_Level">{user.level}</span>
-        <GoldView />
+        <div className="UserHUD_UserInfo">
+        <span className="UserHUD_Name">{getUser().name} {classIcon()}</span>
+        <span className="UserHUD_Level">Lv {getUser().level}</span>
+        <span className="UserHUD_Xp">{getUser().xp}/{getUser().xpToUp}</span>
+        </div>
       </div>
+      <hr />
+      <button onClick={deleteAccount}>Delete account</button>
+      <GoldView />
     </div>
   );
 }

@@ -1,17 +1,17 @@
 import React from "react";
 import "./style.css";
-import useUser from "../../../../Hooks/useUser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoins } from "@fortawesome/free-solid-svg-icons";
+import { getUser } from "../../../../LocalStorage/user";
+
 
 function GoldView() {
-  const { user } = useUser();
   return (
     <span className="GoldView">
       <span className="GoldView_Gold_icon">
         <FontAwesomeIcon icon={faCoins} />
       </span>
-      <span className="GoldView_Gold_value">{user.gold}</span>
+      <span className="GoldView_Gold_value">{getUser().gold}</span>
     </span>
   );
 }

@@ -14,15 +14,34 @@
 }
 
 .CreateCharPage_panel {
+
+    	/* border */
+	border-style: solid;
+	border-image-source: url("./../../assests/RPGUI/border-image.png");
+	border-image-repeat: repeat;
+	border-image-slice: 6 6 6 6;
+	border-image-width: 18px;
+	border-width: 15px;
+	padding: 12px;
+
+    	/* internal border */
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    	/* background */
+	background: url("../../assests/RPGUI/background-image.png") repeat repeat;
+	background-clip: padding-box;
+	background-origin: padding-box;
+	background-position: center;
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 450px;
     height: 550px;
-    background-color: rgb(31, 29, 29);
     border-radius: 5px;
-    border: 3px solid var(--primary-color);
 }
 
 .CreateCharPage_Title {
@@ -31,29 +50,48 @@
     text-shadow: 1px 1px 5px var(--primary-color);
 }
 
-.CreateCharPage_Button {
-    margin-top: 2rem;
-    font-weight: bolder;
-    font-size: 2rem;
-    color: var(--primary-color);
-    padding: 1rem 3rem;
-    border-radius: 15px;  
-    cursor: pointer; 
-    border: 1px solid var(--primary-color);
-    transition: 500ms;
-    text-transform: uppercase;
-    background-color:  #D3CCE3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    ;
+.CreateCharPage_Button {   
+	/* hide button default stuff */
+	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    overflow: hidden;
+    outline:none;
+
+	/* background */
+	background: url("../../assests/RPGUI/button.png") no-repeat no-repeat;
+	background-clip: padding-box;
+	background-origin: padding-box;
+	background-position: center;
+	background-size: 100% 100%;
+
+	/* font size */
+	font-size: 2rem;
+
+	/* default size and display */
+    max-width: 100%;
+    min-width: 240px;
+    height: 80px;
+    display: inline-block;
+
+    /* padding */
+    padding-left: 35px;
+    padding-right: 35px;
+
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'MedievalSharp', cursive;
+    color: white;
 }
 
 .CreateCharPage_Button:hover {
-    background: none;
-    background-color: #120916;
-    color: white;
-    border: 1px solid white;
+    background-image: url("../../assests/RPGUI/button-hover.png");
 }
+
+.CreateCharPage_Button:active {
+    background-image: url("../../assests/RPGUI/button-down.png");
+}
+
 
 
 @media (max-width: 900px) {

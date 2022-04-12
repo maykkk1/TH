@@ -1,23 +1,20 @@
 import React from 'react';
 import './style.css'
-import useToDoList from "../../../../Hooks/useToDoList"
 import LevelUp from '../../../../services/LevelUp';
-import useUser from "../../../../Hooks/useUser";
+import { setUser, getUser } from '../../../../LocalStorage/user';
+import { getTodoList, setTodoList } from '../../../../LocalStorage/TodoStorage';
 
 function ToDoItem(props) {
-    const { SetToDoList, toDoList } = useToDoList();
-    const {user, setUser} = useUser();
 
     const CompleteToDo = (e) => {
         let id = (e.target.id)
         id = parseInt(id.replace(/\D/g,''))
-        const auxList = toDoList.filter((toDo)=>{
+        const auxList = getTodoList().filter((toDo)=>{
             return toDo.id !== id; 
         })
-        SetToDoList(()=>{
-            return [...auxList]
-        })
-        setUser(LevelUp(user, 50, 30))
+        setTodoList(auxList)
+        props.SetTodoListState(getTodoList())
+        setUser(LevelUp(getUser(), 50, 30))
     }
     
     return ( 

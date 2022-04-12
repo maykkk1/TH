@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import "./style.css";
 import ToDoItem from "./ToDoItem/ToDoItem";
 import ToDoItemModal from "./ToDoItem/ToDoItemModal/ToDoItemModal";
-import useToDoList from "../../../Hooks/useToDoList"
 import Title from "../util/Title/Title";
+import { getTodoList } from "../../../LocalStorage/TodoStorage";
 
 function ToDo() {
-  const {toDoList} = useToDoList();
   const [isToDoListModalVisible, SetIsToDoListModalVisible] = useState(false);
+  const [toDoListState, SetTodoListState] = useState(getTodoList());
+  console.log(toDoListState);
 
   const showToDoListModal = () => {
     isToDoListModalVisible
@@ -27,13 +28,21 @@ function ToDo() {
       </button>
       {isToDoListModalVisible ? (
         <ToDoItemModal
+          SetTodoListState={SetTodoListState}
           CloseModal={showToDoListModal}
         />
       ) : null}
-      <Title  titulo={"To-do"}/>
+      <Title titulo={"To-do"} />
       <ul className="toDoList">
-        {toDoList.map((element) => {
-          return <ToDoItem texto={element.content} key={element.id} keyId={element.id} />;
+        {toDoListState.map((element) => {
+          return (
+            <ToDoItem
+              SetTodoListState={SetTodoListState}
+              texto={element.content}
+              key={element.id}
+              keyId={element.id}
+            />
+          );
         })}
       </ul>
     </div>

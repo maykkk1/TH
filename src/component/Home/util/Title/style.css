@@ -1,7 +1,9 @@
 .Title {
     height:10%;
     font-size: 2rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    color: white;
+    font-family: 'MedievalSharp', cursive;
 }
 
 .Title::after {
@@ -10,5 +12,5 @@
     width: 50px;
     height: 3px;
     margin: 0 auto;
-    background-color: var(--primary-color);
+    background-color: white;
 }

@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import "./ToDoItemModal.css";
-import useToDoList from "../../../../../Hooks/useToDoList";
+import {getTodoList, setTodoList} from "../../../../../LocalStorage/TodoStorage"
 
 function ToDoItemModal(props) {
   const [toDoText, SetToDoText] = useState("");
-  const { SetToDoList, toDoList } = useToDoList();
 
   const getId = () => {
-    if (toDoList.length > 0) {
-      return toDoList[toDoList.length - 1].id + 1;
+    if (getTodoList().length > 0) {
+      return getTodoList()[getTodoList().length - 1].id + 1;
     } else {
       return 0;
     }
@@ -17,11 +16,10 @@ function ToDoItemModal(props) {
   const addTodo = () => {
     const id = getId();
     const toDo = { content:toDoText, id:id };
-    const auxList = toDoList;
+    const auxList = getTodoList();
     auxList.push(toDo);
-    SetToDoList(() => {
-      return [...auxList];
-    });
+    setTodoList(auxList);
+    props.SetTodoListState(getTodoList())
   };
 
   return (

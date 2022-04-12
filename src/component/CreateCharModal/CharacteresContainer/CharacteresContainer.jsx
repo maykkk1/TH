@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./style.css";
 import Character from "../Character/Character";
 
 function CharacteresContainer(props) {
@@ -10,6 +9,7 @@ function CharacteresContainer(props) {
       characterAvatar={"male_warrior.webp"}
       setCharacterSelected={props.setCharacterSelected}
       characterSelected={props.characterSelected}
+      SetClassSelected={props.SetClassSelected}
     />,
     <Character
       key={1}
@@ -17,6 +17,7 @@ function CharacteresContainer(props) {
       characterAvatar={"male_rogue.webp"}
       setCharacterSelected={props.setCharacterSelected}
       characterSelected={props.characterSelected}
+      SetClassSelected={props.SetClassSelected}
     />,
     <Character
       key={2}
@@ -24,6 +25,7 @@ function CharacteresContainer(props) {
       characterAvatar={"male_mage.webp"}
       setCharacterSelected={props.setCharacterSelected}
       characterSelected={props.characterSelected}
+      SetClassSelected={props.SetClassSelected}
     />,
   ];
 
@@ -34,6 +36,7 @@ function CharacteresContainer(props) {
       characterAvatar={"female_warrior.webp"}
       setCharacterSelected={props.setCharacterSelected}
       characterSelected={props.characterSelected}
+      SetClassSelected={props.SetClassSelected}
     />,
     <Character
       key={1}
@@ -41,6 +44,7 @@ function CharacteresContainer(props) {
       characterAvatar={"female_rogue.webp"}
       setCharacterSelected={props.setCharacterSelected}
       characterSelected={props.characterSelected}
+      SetClassSelected={props.SetClassSelected}
     />,
     <Character
       key={2}
@@ -48,6 +52,7 @@ function CharacteresContainer(props) {
       characterAvatar={"female_mage.webp"}
       setCharacterSelected={props.setCharacterSelected}
       characterSelected={props.characterSelected}
+      SetClassSelected={props.SetClassSelected}
     />,
   ];
 

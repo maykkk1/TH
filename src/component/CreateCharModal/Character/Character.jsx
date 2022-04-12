@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./style.css";
 
 function Character(props) {
 
   const characterSelectedStyle = {
-    border: "4px solid var(--primary-color)",
-    boxShadow: "0 5px 10px var(--primary-color)",
+    boxShadow: "0 5px 10px #9CC0E7",
   };
 
   const ChangeStyle = () => {
-    if(props.characterAvatar == props.characterSelected) {
+    if(props.characterAvatar === props.characterSelected) {
       return characterSelectedStyle
     } else {
       return {}
@@ -23,6 +22,7 @@ function Character(props) {
       <div
         onClick={() => {
           props.setCharacterSelected(props.characterAvatar);
+          props.SetClassSelected(props.characterClass)
         }}
         style={ChangeStyle()}
         className="Character_imgCharacterWrapper"

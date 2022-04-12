@@ -18,12 +18,31 @@
 }
 
 .GoldView_Gold_value {
-    padding: 5px;
-    font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     width: 150px;
     display: flex;
     justify-content: flex-end;
-    background-color: white;
     border-radius: 10px;
+
+    	/* border */
+	border-style: solid;
+	border-image-source: url("../../../../assests/RPGUI/border-image-grey.png");
+	border-image-repeat: repeat;
+	border-image-slice: 3 3 3 3;
+	border-image-width: 7px;
+	border-width: 7px;
+	padding: 5px;
+
+	/* internal border */
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+	/* background */
+	background: url("../../../../assests/RPGUI/background-image-grey.png") repeat repeat;
+	background-clip: padding-box;
+	background-origin: padding-box;
+	background-position: center;
+
+    color: white;
 }

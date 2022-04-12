@@ -1,25 +1,23 @@
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
-import useUser from "../../../../Hooks/useUser";
-import useHabitsList from '../../../../Hooks/useHabitsList'
 import LevelUp from "../../../../services/LevelUp";
+import { setUser, getUser } from "../../../../LocalStorage/user";
+import {getHabitsList, setHabitsList} from "../../../../LocalStorage/habitsList"
 
 function Habit_Item(props) {
-  const { user, setUser } = useUser();
-  const {habitsList, SetHabitsList} = useHabitsList()
 
   const habitDone = () => {
-    setUser(LevelUp(user, 25, 10));
+    setUser(LevelUp(getUser(), 50, 20))
   };
 
   const deteleHabit = (e) => {
     let id = parseInt(e.target.id.replace(/\D/g,'')) 
-    const auxList = habitsList.filter((habit)=>{
+    const auxList = getHabitsList().filter((habit)=>{
         return habit.id !== id; 
     })
-    SetHabitsList(auxList)
-    console.log(id)
+    setHabitsList(auxList)
+    props.SetHabitsListState(getHabitsList())
   };
 
   return (

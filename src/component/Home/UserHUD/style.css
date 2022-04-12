@@ -3,51 +3,73 @@
 
 .UserHUD {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100%;
-    background-color: rgb(237, 233, 240);
     position: relative;
+    padding-top: 10px;
 }
 
 
 .UserHUD_AvatarSection {
+    font-family: 'MedievalSharp', cursive;
     width: 100%;
-    height: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+
+.UserHUD_UserInfo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    border: 3px solid var(--primary-color);
-    -moz-box-shadow:    inset 0 0 10px #000000;
-    -webkit-box-shadow: inset 0 0 10px #000000;
-    box-shadow:         inset 0 0 10px #000000;
+    gap: 5px;
+    color: seashell;
+    padding: 5px 0;
 }
 
 .UserHUD_Name {
-    font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 190px;
+    font-size: 1.5rem;
     font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgb(128, 119, 136);
+    text-transform: capitalize;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 
-.UserHUD_Class {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
+.UserHUD_Xp {
+    font-size: 1rem;
+    color: rgba(128, 128, 128, 0.774);
 }
 
 .UserHUD_AvatarWrapper {
-    width: 200px;
-    height: 200px;
-    background-color: black;
-    border-radius: 200px;
-    border: 2px solid var(--primary-color);
-    box-shadow: 2px 2px 5px black;
+    width: 150px;
+    height: 150px;
     overflow: hidden;
+
+    	/* border */
+	border-style: solid;
+	border-image-source: url("../../../assests/RPGUI/border-image-grey.png");
+	border-image-repeat: repeat;
+	border-image-slice: 3 3 3 3;
+	border-image-width: 7px;
+	border-width: 7px;
+
+	/* internal border */
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+	/* background */
+	background: url("../../../assests/RPGUI/background-image-grey.png") repeat repeat;
+	background-clip: padding-box;
+	background-origin: padding-box;
+	background-position: center;
 }
 
 .UserHUD_AvatarWrapper img {
@@ -57,14 +79,65 @@
 }
 
 .UserHUD_Level {
-    font-family: 'MedievalSharp', cursive;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 2rem;
-    background-color: white;
+    margin-top: auto;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.UserHUD hr {
+    display:block;
+    border:0px;
+    height:5px;
+    margin: 0 auto;
+    width: 98%;
+    background: url("../../../assests/RPGUI/hr.png") repeat-x top left;
+
+    margin-top: 5px;
+}
+
+.UserHUD button { 
+    font-family: 'MedievalSharp', cursive;
+	/* hide button default stuff */
+	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    overflow: hidden;
+    outline:none;
+
+	/* background */
+	background: url("../../../assests/RPGUI/button.png") no-repeat no-repeat;
+	background-clip: padding-box;
+	background-origin: padding-box;
+	background-position: center;
+	background-size: 100% 80%;
+
+	/* default size and display */
+    max-width: 90%;
+    min-width: 140px;
+    width: 60%;
+    height: 60px;
+    display: inline-block;
+
+
+    /* padding */
+    padding-top: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    overflow: visible;
+
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    margin-top: 30px;
+}
+
+.UserHUD button:hover {
+    background-image: url("../../../assests/RPGUI/button-hover.png");
+}
+
+.UserHUD button:active {
+    background-image: url("../../../assests/RPGUI/button-down.png");
 }
 

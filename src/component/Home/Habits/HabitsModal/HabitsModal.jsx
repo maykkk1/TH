@@ -1,10 +1,9 @@
 import "./style.css";
 import React, { useState } from "react";
-import useHabitsList from "../../../../Hooks/useHabitsList";
+import { getHabitsList, setHabitsList } from "../../../../LocalStorage/habitsList";
 
 function HabitsModal(props) {
     const [habitText, SetHabitText] = useState('')
-    const {habitsList, SetHabitsList} = useHabitsList()
 
     const handleHabitText = (e) => {
         let tempText = e.target.value
@@ -14,8 +13,8 @@ function HabitsModal(props) {
     }
 
     const getId = () => {
-        if (habitsList.length > 0) {
-          return habitsList[habitsList.length - 1].id + 1;
+        if (getHabitsList().length > 0) {
+          return getHabitsList()[getHabitsList().length - 1].id + 1;
         } else {
           return 0;
         }
@@ -25,11 +24,11 @@ function HabitsModal(props) {
         const id = getId()
         e.preventDefault()
         const habit = {content:habitText, id:id}
-        const auxHabitList = habitsList
+        const auxHabitList = getHabitsList()
         auxHabitList.push(habit)
-        SetHabitsList(auxHabitList)
+        setHabitsList(auxHabitList)
+        props.SetHabitsListState(getHabitsList())
         props.onClose()
-        console.log(habitsList)
     }
 
 

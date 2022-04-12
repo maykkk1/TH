@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import "./style.css";
-import useUser from "../../Hooks/useUser";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVenus, faMars } from "@fortawesome/free-solid-svg-icons";
 import CharacteresContainer from "./CharacteresContainer/CharacteresContainer";
+import {storeUser, getUser} from "../../LocalStorage/user";
 
 const CreateCharModal = ({ onClose }) => {
-  const { user, SetUser} = useUser();
   const [createError, SetCreateError] = useState(false);
   const [userName, SetUserName] = useState()
   const [genderSelected, SetGenderSelected] = useState("female");
   const [characterSelected, SetCharacterSelected] = useState('female_warrior.webp');
+  const [classSelected, SetClassSelected] = useState('Warrior')
 
   const nav = useNavigate();
   const navigation = () => {
@@ -35,11 +35,8 @@ const CreateCharModal = ({ onClose }) => {
 
   const createUser = () => {
     if(userName === undefined || characterSelected === undefined) return SetCreateError(true);
-    SetUser(user =>({
-      ...user,
-      name:userName,
-      avatar:characterSelected
-    }))
+    storeUser(userName, characterSelected, classSelected)
+    console.log(getUser())
     navigation()
   }
 
@@ -74,13 +71,14 @@ const CreateCharModal = ({ onClose }) => {
           </button>
         </div>
         <CharacteresContainer
+          SetClassSelected={SetClassSelected}
           characterSelected={characterSelected}
           setCharacterSelected={SetCharacterSelected}
           genderSelected={genderSelected}
         />
         <form>
           <label htmlFor="CreateCharModal_userName">Name</label>
-          <input onChange={(e)=>{handleNameUser(e)}} value={userName} type="text" id="CreateCharModal_userName" />
+          <input onChange={(e)=>{handleNameUser(e)}} autocomplete="off" value={userName} type="text" id="CreateCharModal_userName" />
           <span id="createError" style={handleCreateError()}>Escolha sua classe e informe o seu nome!</span>
           <button onClick={(e)=>{
             e.preventDefault()

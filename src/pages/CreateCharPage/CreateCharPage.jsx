@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CreateCharModal from "../../component/CreateCharModal/CreateCharModal";
 import "./style.css";
+import { getUser } from "../../LocalStorage/user";
+import { useNavigate } from "react-router-dom";
 
 const CreateCharPage = () => {
   const [isCreateCharModalVisible, SetIsCreateCharModalVisible] =
@@ -11,6 +13,16 @@ const CreateCharPage = () => {
     ? SetIsCreateCharModalVisible(false)
     : SetIsCreateCharModalVisible(true)
   }
+
+  const nav = useNavigate();
+  const navigation = () => {
+    nav("/home");
+  };
+
+  useEffect(()=>{
+
+    if(getUser() != null) navigation()
+  }, [])
   return (
     <div className="CreateCharPage">
       <div className="CreateCharPage_panel">
