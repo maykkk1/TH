@@ -1,29 +1,24 @@
 import React, { useState } from "react";
 import Title from "../util/Title/Title";
 import "./style.css";
-import RewardItem from "./RewardItem/RewardItem";
-import GoldView from "../util/GoldView/GoldView"
-import RewardsList from "../../../services/RewardsList";
+import GoldView from "../util/GoldView/GoldView";
+import RewardsModal from "./RewardsModal/RewardsModal";
 
 function Rewards() {
-  const [goldViewState, SetGoldViewState] = useState(<GoldView />) 
+  const [goldViewState, SetGoldViewState] = useState(<GoldView />);
+  const [isRewardsModalVisible, SetIsRewardsModalVisible] = useState(true)
+
+
+  const handleRewardsModal = () => {
+    isRewardsModalVisible ? SetIsRewardsModalVisible(false) : SetIsRewardsModalVisible(true);
+  }
+
   return (
     <div className="Rewards">
+      {isRewardsModalVisible ? <RewardsModal/> : null}
+      <button className="addReward"> + </button>
       <Title titulo={"Rewards"} />
-      <div className="Rewards_Container">
-        {RewardsList.map((element) => {
-          return (
-            <RewardItem
-              rewardTitle={element.rewardTitle}
-              rewardTime={element.rewardTime}
-              rewardImgUrl={element.rewardImgUrl}
-              rewardGoldCost={element.rewardGoldCost}
-              rerenderGoldView={SetGoldViewState}
-            />
-          );
-        })}
-        {goldViewState}
-      </div>
+      <div className="Rewards_Container">{goldViewState}</div>
     </div>
   );
 }

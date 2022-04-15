@@ -15,6 +15,34 @@
 	background-position: center;
 }
 
+.addReward {
+    font-family: 'MedievalSharp', cursive;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 3rem;
+    color: white;
+    right: 1rem;
+    cursor: pointer;
+
+    background: url("../../../assests/RPGUI/background-image-golden2.png") repeat repeat;
+	background-clip: padding-box;
+	background-origin: padding-box;
+	background-position: center;
+
+    border-style: solid;
+	border-image-source: url("../../../assests/RPGUI/border-image-golden2.png");
+	border-image-repeat: repeat;
+	border-image-slice: 8 8 8 8;
+	border-image-width: 18px;
+	border-width: 15px;
+}
+
 .Rewards_Container {
     padding: .5rem;
     width: 100%;
