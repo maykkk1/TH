@@ -1,0 +1,31 @@
+span {
+	width: max-content;
+	display: flex;
+	gap: 5px;
+	font-size: 15px;
+	align-items: center;
+}
+
+#timeRadio {
+	display: none;
+}
+
+#timeRadio {
+    background: url('../../../../assests/RPGUI/radio-off.png') no-repeat;
+		line-height: 24px;
+    display: inline-block;
+    background-size: auto 100%;
+    padding-left: 34px;
+    height: 24px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#timeRadio:checked {
+	background: url('../../../../assests/RPGUI/radio-on.png') no-repeat;
+		line-height: 24px;
+    display: inline-block;
+    background-size: auto 100%;
+    padding-left: 34px;
+    height: 24px;
+}

@@ -5,8 +5,8 @@ import GoldView from "../util/GoldView/GoldView";
 import RewardsModal from "./RewardsModal/RewardsModal";
 
 function Rewards() {
-  const [goldViewState, SetGoldViewState] = useState(<GoldView />);
-  const [isRewardsModalVisible, SetIsRewardsModalVisible] = useState(true)
+  const [goldViewState] = useState(<GoldView />);
+  const [isRewardsModalVisible, SetIsRewardsModalVisible] = useState(false)
 
 
   const handleRewardsModal = () => {
@@ -15,8 +15,8 @@ function Rewards() {
 
   return (
     <div className="Rewards">
-      {isRewardsModalVisible ? <RewardsModal/> : null}
-      <button className="addReward"> + </button>
+      {isRewardsModalVisible ? <RewardsModal onClose={handleRewardsModal}/> : null}
+      <button onClick={handleRewardsModal} className="addReward"> + </button>
       <Title titulo={"Rewards"} />
       <div className="Rewards_Container">{goldViewState}</div>
     </div>

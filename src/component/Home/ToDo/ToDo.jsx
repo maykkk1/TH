@@ -8,7 +8,6 @@ import { getTodoList } from "../../../LocalStorage/TodoStorage";
 function ToDo() {
   const [isToDoListModalVisible, SetIsToDoListModalVisible] = useState(false);
   const [toDoListState, SetTodoListState] = useState(getTodoList());
-  console.log(toDoListState);
 
   const showToDoListModal = () => {
     isToDoListModalVisible

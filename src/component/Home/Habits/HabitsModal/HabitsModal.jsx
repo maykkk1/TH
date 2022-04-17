@@ -33,8 +33,10 @@ function HabitsModal(props) {
 
 
   return (
-    <div className="HabitsModal">
-      <div className="HabitsModal_Container">
+    <div className="HabitsModal" onClick={(e)=>{
+        if (e.target.id =! "HabitsModal_Habits") props.onClose()
+    }}>
+      <div id="HabitsModal_Container" className="HabitsModal_Container">
         <span className="HabitsModal_Close" onClick={()=>{props.onClose()}}>x</span>
         <form>
           <label htmlFor="HabitsModal_Habits">Habit</label>
