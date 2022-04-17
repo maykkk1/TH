@@ -6,11 +6,11 @@ span {
 	align-items: center;
 }
 
-#timeRadio {
+.RewardsRadio input[type=radio] {
 	display: none;
 }
 
-#timeRadio {
+.RewardsRadio input[type=radio] + label {
     background: url('../../../../assests/RPGUI/radio-off.png') no-repeat;
 		line-height: 24px;
     display: inline-block;
@@ -19,9 +19,10 @@ span {
     height: 24px;
     margin-top: 8px;
     margin-bottom: 8px;
+    cursor: pointer;
 }
 
-#timeRadio:checked {
+.RewardsRadio input[type=radio]:checked + label {
 	background: url('../../../../assests/RPGUI/radio-on.png') no-repeat;
 		line-height: 24px;
     display: inline-block;
