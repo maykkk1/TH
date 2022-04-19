@@ -4,6 +4,7 @@ import GoldView from "../util/GoldView/GoldView";
 import { getUser } from "../../../LocalStorage/user";
 import {getTodoList, setTodoList} from "../../../LocalStorage/TodoStorage"
 import {getHabitsList, setHabitsList} from "../../../LocalStorage/habitsList"
+import { setRewardsList, getRewardsList } from "../../../LocalStorage/rewardsList";
 import ClassIcon from "../util/ClassIcon/ClassIcon";
 import { useNavigate } from "react-router-dom";
 
@@ -32,6 +33,10 @@ function UserHUD() {
   
   useEffect(()=>{
     if(getTodoList() == null) setTodoList([])
+  }, [])
+
+  useEffect(()=>{
+    if(getRewardsList() == null) setRewardsList([])
   }, [])
 
   return (
