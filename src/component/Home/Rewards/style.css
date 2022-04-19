@@ -62,8 +62,8 @@
 	border-image-source: url("../../../assests/RPGUI/border-image-golden2.png");
 	border-image-repeat: repeat;
 	border-image-slice: 8 8 8 8;
-	border-image-width: 18px;
-	border-width: 15px;
+	border-image-width: 10px;
+	border-width: 5px;
 
 	/* internal border */
 	box-sizing: border-box;
