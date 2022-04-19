@@ -56,6 +56,7 @@ function RewardsModal(props) {
         const auxRewardList = getRewardsList();
         auxRewardList.push(reward)
         setRewardsList(auxRewardList)
+        props.setRewardListState(auxRewardList)
     }
 
 

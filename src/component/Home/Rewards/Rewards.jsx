@@ -7,8 +7,9 @@ import RewardsItem from "./RewardsItem/RewardsItem";
 import { getRewardsList } from "../../../LocalStorage/rewardsList";
 
 function Rewards() {
-  const [goldViewState] = useState(<GoldView />);
+  const [goldViewState, SetGoldViewState] = useState(<GoldView />);
   const [isRewardsModalVisible, SetIsRewardsModalVisible] = useState(false);
+  const [rewardListState, SetRewardListState] = useState(getRewardsList());
 
   const handleRewardsModal = () => {
     isRewardsModalVisible
@@ -19,7 +20,10 @@ function Rewards() {
   return (
     <div className="Rewards">
       {isRewardsModalVisible ? (
-        <RewardsModal onClose={handleRewardsModal} />
+        <RewardsModal
+          setRewardListState={SetRewardListState}
+          onClose={handleRewardsModal}
+        />
       ) : null}
       <button onClick={handleRewardsModal} className="addReward">
         {" "}
@@ -27,12 +31,15 @@ function Rewards() {
       </button>
       <Title titulo={"Rewards"} />
       <ul className="Rewards_Container">
-        {getRewardsList().map((reward) => {
+        {rewardListState.map((reward) => {
           return (
             <RewardsItem
               rewardName={reward.name}
               rewardTime={reward.time}
               rewardCost={reward.cost}
+              rewardId={reward.id}
+              setRewardListState={SetRewardListState}
+              setGoldView={SetGoldViewState}
             />
           );
         })}
