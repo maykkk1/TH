@@ -39,9 +39,9 @@ function HabitsModal(props) {
       <div id="HabitsModal_Container" className="HabitsModal_Container">
         <span className="HabitsModal_Close" onClick={()=>{props.onClose()}}>x</span>
         <form>
-          <label htmlFor="HabitsModal_Habits">Habit</label>
+          <label htmlFor="HabitsModal_Habits">Novo habito</label>
           <input autoComplete="off" value={habitText} onChange={(e)=>{handleHabitText(e)}}/>
-          <button onClick={(e)=>(addHabit(e))}>Create</button>
+          <button onClick={(e)=>(addHabit(e))}>Criar</button>
         </form>
       </div>
     </div>

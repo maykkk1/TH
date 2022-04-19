@@ -24,7 +24,7 @@ const CreateCharModal = ({ onClose }) => {
 
   const handleNameUser = (e) => {
     let tempNameValue = e.target.value;
-    if(tempNameValue.length <= 15){
+    if(tempNameValue.length <= 10){
       SetUserName(tempNameValue)
     }
   }
@@ -53,7 +53,7 @@ const CreateCharModal = ({ onClose }) => {
           }}
           className="CreateCharModal_Close"
         ></div>
-        <h1>Select your class</h1>
+        <h1>Selecione sua classe</h1>
         <div className="CreateCharModal_GenderChoiseSection">
           <button
             onClick={() => {
@@ -77,13 +77,13 @@ const CreateCharModal = ({ onClose }) => {
           genderSelected={genderSelected}
         />
         <form>
-          <label htmlFor="CreateCharModal_userName">Name</label>
+          <label htmlFor="CreateCharModal_userName">Nome</label>
           <input onChange={(e)=>{handleNameUser(e)}} autocomplete="off" value={userName} type="text" id="CreateCharModal_userName" />
           <span id="createError" style={handleCreateError()}>Escolha sua classe e informe o seu nome!</span>
           <button onClick={(e)=>{
             e.preventDefault()
             createUser()
-          }}>Create</button>
+          }}>Criar</button>
         </form>
       </div>
     </div>

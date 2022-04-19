@@ -13,7 +13,7 @@ function Nav(props) {
           props.setComponent(<UserHUD />);
         }}
       >
-        Profile
+        Perfil
       </button>
       <button
         onClick={() => {
@@ -27,7 +27,7 @@ function Nav(props) {
           props.setComponent(<Habits />);
         }}
       >
-        Habits
+        Habitos
       </button>
       <button
         onClick={() => {

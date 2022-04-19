@@ -33,7 +33,7 @@ function ToDoItemModal(props) {
       <div className="ToDoItemModal_Container">
         <span onClick={()=>{props.CloseModal()}} className="ToDoItemModal_Close">x</span>
         <form action="">
-          <label htmlFor="ToDoItemModal_ToDo">To-Do</label>
+          <label htmlFor="ToDoItemModal_ToDo">Novo To-Do</label>
           <input
           value={toDoText}
             onChange={(e) => {
@@ -55,7 +55,7 @@ function ToDoItemModal(props) {
             }}
             type="submit"
           >
-            Create
+            Criar
           </button>
         </form>
       </div>

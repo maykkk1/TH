@@ -57,6 +57,7 @@ function RewardsModal(props) {
         auxRewardList.push(reward)
         setRewardsList(auxRewardList)
         props.setRewardListState(auxRewardList)
+        props.onClose()
     }
 
 
@@ -94,7 +95,6 @@ function RewardsModal(props) {
                         <button onClick={(e)=>{
                             e.preventDefault()
                             addReward()
-                            props.onClose()
                         }} type='submit'>Criar</button>
                     </form>
                 </form>
