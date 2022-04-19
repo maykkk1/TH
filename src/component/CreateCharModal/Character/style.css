@@ -34,3 +34,11 @@
     width: 100%;
     object-fit: cover;
 }
+
+.Character__bonus {
+    display: flex;
+    flex-direction: column;
+    color: greenyellow;
+    position: absolute;
+    transform: translateY(220px);
+}
