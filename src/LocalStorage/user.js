@@ -1,5 +1,5 @@
 
-export const storeUser = (name, avatar, classe) =>{
+export const storeUser = (name, avatar, classe, xp, gold) =>{
     localStorage.setItem('user', JSON.stringify(
         {
             name:name,
@@ -8,7 +8,9 @@ export const storeUser = (name, avatar, classe) =>{
             level:1,
             xp:0,
             xpToUp:100,
-            gold:0
+            gold:0,
+            goldBonus:gold,
+            xpBonus:xp
         }
     ))
 }

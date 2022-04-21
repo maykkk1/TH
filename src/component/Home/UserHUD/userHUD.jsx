@@ -55,7 +55,7 @@ function UserHUD() {
         </div>
       </div>
       <hr />
-      <button onClick={deleteAccount}>Delete account</button>
+      <button onClick={deleteAccount}>Deletar usuário</button>
       <GoldView />
     </div>
   );

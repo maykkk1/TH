@@ -6,7 +6,6 @@ function ClassIcon(props) {
 
 
     const handleClassHover = () => {
-        console.log( 'a')
         isClassHoverVisible ? SetIsClassHoverVisible(false) : SetIsClassHoverVisible(true);
     }
 

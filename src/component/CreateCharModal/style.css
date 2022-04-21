@@ -51,6 +51,11 @@
   text-transform: uppercase;
 }
 
+.CreateCharModal_Container h1{
+  width: 100%;
+  text-align: center;
+}
+
 .CreateCharModal_Close {
   position: relative;
   right: 30px;

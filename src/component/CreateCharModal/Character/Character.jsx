@@ -27,7 +27,7 @@ function Character(props) {
     if(props.characterClass == 'Mage') SetClassBonus({xp:30, gold:10})
     if(props.characterClass == 'Rogue') SetClassBonus({xp:10, gold:30})
     if(props.characterClass == 'Warrior') SetClassBonus({xp:15, gold:15})
-  })
+  }, [])
 
   return (
     <div className="Character">

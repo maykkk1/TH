@@ -8,7 +8,7 @@ import {getHabitsList, setHabitsList} from "../../../../LocalStorage/habitsList"
 function Habit_Item(props) {
 
   const habitDone = () => {
-    setUser(LevelUp(getUser(), 50, 20))
+    setUser(LevelUp(getUser(), 50 * getUser().xpBonus, 20 * getUser().goldBonus))
   };
 
   const deteleHabit = (e) => {

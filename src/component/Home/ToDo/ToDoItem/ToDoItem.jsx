@@ -14,7 +14,7 @@ function ToDoItem(props) {
         })
         setTodoList(auxList)
         props.SetTodoListState(getTodoList())
-        setUser(LevelUp(getUser(), 50, 30))
+        setUser(LevelUp(getUser(), 50 * getUser().xpBonus, 30 * getUser().goldBonus))
     }
     
     return ( 

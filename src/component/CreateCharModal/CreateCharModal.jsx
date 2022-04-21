@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVenus, faMars } from "@fortawesome/free-solid-svg-icons";
 import CharacteresContainer from "./CharacteresContainer/CharacteresContainer";
-import {storeUser, getUser} from "../../LocalStorage/user";
+import {getUser, storeUser} from "../../LocalStorage/user";
 
 const CreateCharModal = ({ onClose }) => {
   const [createError, SetCreateError] = useState(false);
@@ -35,8 +35,11 @@ const CreateCharModal = ({ onClose }) => {
 
   const createUser = () => {
     if(userName === undefined || characterSelected === undefined) return SetCreateError(true);
-    storeUser(userName, characterSelected, classSelected)
-    console.log(getUser())
+    let classBonus = {}
+    if(classSelected === 'Mage') classBonus = {xp:1.3, gold:1.1}
+    if(classSelected === 'Rogue') classBonus= {xp:1.1, gold:1.3}
+    if(classSelected === 'Warrior') classBonus = {xp:1.15, gold:1.15}
+    storeUser(userName, characterSelected, classSelected, classBonus.xp, classBonus.gold)
     navigation()
   }
 
@@ -78,7 +81,7 @@ const CreateCharModal = ({ onClose }) => {
         />
         <form>
           <label htmlFor="CreateCharModal_userName">Nome</label>
-          <input onChange={(e)=>{handleNameUser(e)}} autocomplete="off" value={userName} type="text" id="CreateCharModal_userName" />
+          <input onChange={(e)=>{handleNameUser(e)}} autoComplete='off' value={userName} type="text" id="CreateCharModal_userName" />
           <span id="createError" style={handleCreateError()}>Escolha sua classe e informe o seu nome!</span>
           <button onClick={(e)=>{
             e.preventDefault()
