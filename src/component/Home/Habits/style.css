@@ -9,7 +9,7 @@
     position: relative;
 
         	/* background */
-	background: url("../../../assests/RPGUI/background-image-golden.png") repeat repeat;
+	background: url("../../../assests/RPGUI/background-image-golden.webp") repeat repeat;
 	background-clip: padding-box;
 	background-origin: padding-box;
 	background-position: center;
@@ -30,13 +30,13 @@
     right: 1rem;
     cursor: pointer;
 
-    background: url("../../../assests/RPGUI/background-image-golden2.png") repeat repeat;
+    background: url("../../../assests/RPGUI/background-image-golden2.webp") repeat repeat;
 	background-clip: padding-box;
 	background-origin: padding-box;
 	background-position: center;
 
     border-style: solid;
-	border-image-source: url("../../../assests/RPGUI/border-image-golden2.png");
+	border-image-source: url("../../../assests/RPGUI/border-image-golden2.webp");
 	border-image-repeat: repeat;
 	border-image-slice: 8 8 8 8;
 	border-image-width: 18px;
@@ -55,7 +55,7 @@
 
         	/* border */
 	border-style: solid;
-	border-image-source: url("../../../assests/RPGUI/border-image-golden2.png");
+	border-image-source: url("../../../assests/RPGUI/border-image-golden2.webp");
 	border-image-repeat: repeat;
 	border-image-slice: 8 8 8 8;
 	border-image-width: 18px;
@@ -67,7 +67,7 @@
     -webkit-box-sizing: border-box;
 
 	/* background */
-	background: url("../../../assests/RPGUI/background-image-golden2.png") repeat repeat;
+	background: url("../../../assests/RPGUI/background-image-golden2.webp") repeat repeat;
 	background-clip: padding-box;
 	background-origin: padding-box;
 	background-position: center;
@@ -83,7 +83,7 @@
 .Habits ul ::-webkit-scrollbar-track,
 .Habits ul::-webkit-scrollbar-track
 {
-    background-image:url('../../../assests/RPGUI/scrollbar-track.png');
+    background-image:url('../../../assests/RPGUI/scrollbar-track.webp');
     background-size: 18px 60px;
     background-repeat: repeat-y;
 }
@@ -92,7 +92,7 @@
 .Habits ul ::-webkit-scrollbar-thumb,
 .Habits ul::-webkit-scrollbar-thumb
 {
-    background-image:url('../../../assests/RPGUI/scrollbar-thumb.png');
+    background-image:url('../../../assests/RPGUI/scrollbar-thumb.webp');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -101,7 +101,7 @@
 .Habits ul ::-webkit-scrollbar-button,
 .Habits ul::-webkit-scrollbar-button
 {
-	background-image:url('../../../assests/RPGUI/scrollbar-button.png');
+	background-image:url('../../../assests/RPGUI/scrollbar-button.webp');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }

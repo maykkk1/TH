@@ -12,7 +12,7 @@
 .Nav_Nav button{
     	/* border */
         border-style: solid;
-        border-image-source: url("../../../assests/RPGUI/border-image-golden2.png");
+        border-image-source: url("../../../assests/RPGUI/border-image-golden2.webp");
         border-image-repeat: repeat;
         border-image-slice: 6 6 6 6;
         border-image-width: 5px;
@@ -25,7 +25,7 @@
         -webkit-box-sizing: border-box;
     
         /* background */
-        background: url("../../../assests/RPGUI/background-image.png");
+        background: url("../../../assests/RPGUI/background-image.webp");
         background-clip: padding-box;
         background-origin: padding-box;
         background-position: center;

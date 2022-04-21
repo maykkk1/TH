@@ -11,7 +11,7 @@ span {
 }
 
 .RewardsRadio input[type=radio] + label {
-    background: url('../../../../assests/RPGUI/radio-off.png') no-repeat;
+    background: url('../../../../assests/RPGUI/radio-off.webp') no-repeat;
 		line-height: 24px;
     display: inline-block;
     background-size: auto 100%;
@@ -23,7 +23,7 @@ span {
 }
 
 .RewardsRadio input[type=radio]:checked + label {
-	background: url('../../../../assests/RPGUI/radio-on.png') no-repeat;
+	background: url('../../../../assests/RPGUI/radio-on.webp') no-repeat;
 		line-height: 24px;
     display: inline-block;
     background-size: auto 100%;

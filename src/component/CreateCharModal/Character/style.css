@@ -16,12 +16,12 @@
 .Character_imgCharacterWrapper {
     width: 90%;
     height: 170px;
-    background-image: url('../../../assests/RPGUI/background-image-golden.png');
+    background-image: url('../../../assests/RPGUI/background-image-golden.webp');
     overflow: hidden;
     border: 2px solid rgb(145, 137, 137);
 
     border-style: solid;
-	border-image-source: url("../../../assests/RPGUI/border-image-golden.png");
+	border-image-source: url("../../../assests/RPGUI/border-image-golden.webp");
 	border-image-repeat: repeat;
 	border-image-slice: 4 4 4 4;
 	border-image-width: 10px;

@@ -25,11 +25,12 @@ input[type=number] {
 
 .RewardsModal_Container {
     width: 100%;
-    height: 80%;
+    min-height: 80%;
+	height: max-content;
 
     	/* border */
 	border-style: solid;
-	border-image-source: url("../../../../assests/RPGUI/border-image.png");
+	border-image-source: url("../../../../assests/RPGUI/border-image.webp");
 	border-image-repeat: repeat;
 	border-image-slice: 6 6 6 6;
 	border-image-width: 18px;
@@ -42,7 +43,7 @@ input[type=number] {
     -webkit-box-sizing: border-box;
 
 	/* background */
-	background: url("../../../../assests/RPGUI/background-image.png") repeat repeat;
+	background: url("../../../../assests/RPGUI/background-image.webp") repeat repeat;
 	background-clip: padding-box;
 	background-origin: padding-box;
 	background-position: center;
@@ -154,7 +155,7 @@ input[type=number] {
 		outline:none;
 	
 		/* background */
-		background: url("../../../../assests/RPGUI/button.png") no-repeat no-repeat;
+		background: url("../../../../assests/RPGUI/button.webp") no-repeat no-repeat;
 		background-clip: padding-box;
 		background-origin: padding-box;
 		background-position: center;
@@ -181,7 +182,7 @@ input[type=number] {
 }
 
 .RewardsModal button:hover {
-	background-image: url("../../../../assests/RPGUI/button-hover.png");
+	background-image: url("../../../../assests/RPGUI/button-hover.webp");
 }
 
 .rewardNameError {

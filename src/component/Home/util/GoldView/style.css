@@ -26,7 +26,7 @@
 
     	/* border */
 	border-style: solid;
-	border-image-source: url("../../../../assests/RPGUI/border-image-grey.png");
+	border-image-source: url("../../../../assests/RPGUI/border-image-grey.webp");
 	border-image-repeat: repeat;
 	border-image-slice: 3 3 3 3;
 	border-image-width: 7px;
@@ -39,7 +39,7 @@
     -webkit-box-sizing: border-box;
 
 	/* background */
-	background: url("../../../../assests/RPGUI/background-image-grey.png") repeat repeat;
+	background: url("../../../../assests/RPGUI/background-image-grey.webp") repeat repeat;
 	background-clip: padding-box;
 	background-origin: padding-box;
 	background-position: center;
